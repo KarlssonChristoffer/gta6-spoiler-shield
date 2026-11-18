@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Demo feed</title>
+<!--
+  The page behind docs/demo.png. A made-up feed, not a copy of any real site.
+  It borrows the Reddit adapter's ".thing" selector so posts collapse into
+  bars, while the sidebar shows the blur used on sites without an adapter.
+  See it live:  npm run assets  (prints the address), or re-render the image.
+-->
+<script>window.__spoilerShieldTestHost = 'www.reddit.com';</script>
+<script src="/shield.js"></script>
+<style>
+  body { margin: 0; background: #0b0c0e; color: #dfe1e6; font: 15px/1.45 system-ui, sans-serif; }
+  .wrap { display: grid; grid-template-columns: 1fr 300px; gap: 28px; max-width: 1040px; margin: 0 auto; padding: 32px; }
+  .thing { display: grid; grid-template-columns: 132px 1fr; gap: 16px; padding: 14px; margin-bottom: 12px; background: #131417; border: 1px solid #23252b; border-radius: 12px; }
+  .thumb { height: 82px; border-radius: 8px; }
+  .thing h2 { margin: 0 0 4px; font-size: 17px; }
+  .thing p { margin: 0; color: #8b8f98; font-size: 13px; }
+  aside { background: #131417; border: 1px solid #23252b; border-radius: 12px; padding: 16px 18px; align-self: start; }
+  aside h3 { margin: 0 0 10px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: #8b8f98; }
+  aside ul { list-style: none; margin: 0; padding: 0; }
+  aside li { padding: 9px 0; border-top: 1px solid #23252b; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <main>
+    <div class="thing"><div class="thumb" style="background:#7a5a36"></div><div><h2>My sourdough finally rose after six tries</h2><p>r/Sourdough · 214 comments</p></div></div>
+    <div class="thing"><div class="thumb" style="background:#b5305f"></div><div><h2>GTA 6 ending explained (full story)</h2><p>r/gaming · 3.1k comments</p></div></div>
+    <div class="thing"><div class="thumb" style="background:#2f6f8f"></div><div><h2>Which keyboard switches are quietest for an open office?</h2><p>r/MechanicalKeyboards · 88 comments</p></div></div>
+    <div class="thing"><div class="thumb" style="background:#c0562a"></div><div><h2>You are not ready for the last mission</h2><p>r/GTA6 · 940 comments</p></div></div>
+    <div class="thing"><div class="thumb" style="background:#4a7a4a"></div><div><h2>Tomatoes on a north-facing balcony: a diary</h2><p>r/gardening · 41 comments</p></div></div>
+  </main>
+  <aside>
+    <h3>Trending</h3>
+    <ul>
+      <li>Ferry timetable changes</li>
+      <li>Vice City after dark: every secret</li>
+      <li>Stockholm marathon results</li>
+      <li>Jason and Lucia: the scene everyone is posting</li>
+    </ul>
+  </aside>
+</div>
+</body>
+</html>

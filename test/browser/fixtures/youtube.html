@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Video site</title>
+<script>window.__spoilerShieldTestHost = 'www.youtube.com';</script>
+<script src="/shield.js"></script>
+</head>
+<body>
+  <!-- The inner card is hidden; the grid slot around it stays so the grid keeps its shape. -->
+  <ytd-rich-item-renderer id="miss-grid-slot"><yt-lockup-view-model id="hit-lockup"><a href="/watch?v=abc"><img src="t.jpg"></a><h3>GTA VI - Full Story Walkthrough</h3></yt-lockup-view-model></ytd-rich-item-renderer>
+  <ytd-rich-item-renderer id="miss-other-slot"><yt-lockup-view-model id="miss-lockup"><h3>Sourdough for beginners</h3></yt-lockup-view-model></ytd-rich-item-renderer>
+
+  <!-- A neutral title, but the channel gives it away. -->
+  <ytd-video-renderer id="hit-channel-name"><h3>You won't believe this</h3><a href="/@RockstarGames">Rockstar Games</a></ytd-video-renderer>
+
+  <!-- The site reuses elements for new videos: marks must follow the text. -->
+  <ytd-video-renderer id="miss-recycled-clean"><h3 id="r1">Vice City at night</h3></ytd-video-renderer>
+  <ytd-video-renderer id="hit-recycled-spoiler"><h3 id="r2">Cooking stream</h3></ytd-video-renderer>
+
+  <ytd-comment-thread-renderer id="miss-comment">Nice video</ytd-comment-thread-renderer>
+
+  <!-- Outside any card: falls back to blur. -->
+  <p id="hit-outside-cards">Trending: Leonida road trip</p>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('r1').textContent = 'Gardening tips';
+      document.getElementById('r2').textContent = 'Jason Duval best moments';
+    }, 200);
+  </script>
+</body>
+</html>

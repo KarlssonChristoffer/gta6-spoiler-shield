@@ -1,0 +1,19 @@
+{
+  "name": "gta6-spoiler-shield",
+  "version": "1.0.0",
+  "description": "Hides posts, videos, comments and whole pages that mention GTA 6, on every site.",
+  "private": true,
+  "license": "MIT",
+  "repository": "github:KarlssonChristoffer/gta6-spoiler-shield",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "npm run test:unit && node scripts/build.mjs --check && npm run test:browser",
+    "test:unit": "node --test \"test/unit/*.test.js\"",
+    "test:browser": "node test/browser/run.mjs",
+    "test:extension": "node test/browser/run.mjs --extension",
+    "assets": "node scripts/render-assets.mjs"
+  }
+}

@@ -1,0 +1,37 @@
+name: Something innocent was hidden
+description: The shield hid or broke something that has nothing to do with GTA 6.
+labels: [wrongly-hidden]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Hiding older GTA games is intended. Everything else is a bug.
+  - type: input
+    id: site
+    attributes:
+      label: Which site?
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What was hidden?
+      description: The text of the item if you can share it, or which word you think triggered it.
+    validations:
+      required: true
+  - type: dropdown
+    id: damage
+    attributes:
+      label: How bad was it?
+      options:
+        - One item was hidden that should not have been
+        - A large part of the page was hidden or blurred
+        - The site stopped working
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and how you installed it
+    validations:
+      required: true

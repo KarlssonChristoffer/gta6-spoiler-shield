@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- A feed with one post replaced by the dashed "hidden" bar. -->
+  <rect width="128" height="128" rx="26" fill="#16171a"/>
+  <rect x="22" y="24" width="84" height="20" rx="6" fill="#5b5f69"/>
+  <rect x="24" y="56" width="80" height="16" rx="5" fill="none" stroke="#ff4f9a" stroke-width="6" stroke-dasharray="13 9" stroke-linecap="round"/>
+  <rect x="22" y="84" width="84" height="20" rx="6" fill="#5b5f69"/>
+</svg>

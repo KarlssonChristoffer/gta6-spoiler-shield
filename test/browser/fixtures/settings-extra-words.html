@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Extra words and a paused site</title>
+<script>
+  window.__spoilerShieldTestHost = 'news.example';
+  const saved = { settings: JSON.stringify({ extra: 'sourdough', off: ['other.example'] }) };
+  window.GM_getValue = (key, fallback) => saved[key] ?? fallback;
+  window.GM_setValue = (key, value) => { saved[key] = value; };
+</script>
+<script src="/shield.js"></script>
+</head>
+<body>
+  <ul>
+    <li id="hit-users-own-word">My sourdough finally rose</li>
+    <li id="hit-built-in-word">Vice City at night</li>
+    <li id="miss-neutral">Weather tomorrow</li>
+  </ul>
+</body>
+</html>

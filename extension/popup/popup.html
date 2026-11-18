@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Spoiler Shield settings</title>
+<style>
+  body { margin: 0; padding: 14px 16px; width: 300px; background: #16171a; color: #e8e9ec; font: 14px system-ui, sans-serif; }
+  h1 { margin: 0 0 12px; font-size: 15px; }
+  label.row { display: flex; align-items: center; gap: 8px; padding: 6px 0; cursor: pointer; }
+  input[type="checkbox"] { accent-color: #ff4f9a; }
+  small { display: block; color: #8b8f98; margin: 0 0 6px 24px; }
+  textarea { width: 100%; box-sizing: border-box; height: 90px; margin-top: 6px; background: #0e0f11; color: #e8e9ec; border: 1px solid #33363d; border-radius: 6px; padding: 8px; font: 13px system-ui, sans-serif; resize: vertical; }
+  .field { display: block; margin-top: 10px; color: #a9adb6; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+  <h1>GTA 6 Spoiler Shield</h1>
+  <label class="row"><input type="checkbox" id="enabled"> Shield on</label>
+  <label class="row" id="siteRow" hidden><input type="checkbox" id="siteOff"> <span id="siteLabel"></span></label>
+  <label class="row"><input type="checkbox" id="hard"> Hard mode</label>
+  <small>No click-to-show. Hidden things stay hidden.</small>
+  <label class="field">
+    Extra words to hide, one per line
+    <textarea id="extra" spellcheck="false"></textarea>
+  </label>
+  <script src="../src/settings.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

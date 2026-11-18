@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Any website</title>
+<meta name="expect-cover" content="no">
+<script src="/shield.js"></script>
+</head>
+<body>
+<!-- A site with no adapter: matching blocks are blurred. -->
+<main>
+  <article id="hit-article"><h2>GTA 6 ending explained</h2><p>Everything that happens.</p><img src="x.png" alt="thumb"></article>
+  <article id="miss-article"><h2>Best pasta recipes</h2><p>Nothing to see.</p></article>
+  <ul>
+    <li id="hit-hashtag">Watch: #GTAVI first hour</li>
+    <li id="hit-no-space">gta6 map</li>
+    <li id="hit-full-name">Grand Theft Auto VI review</li>
+    <li id="hit-place">Welcome to Vice City</li>
+    <li id="hit-two-weak-words">Jason and Lucia rob a store</li>
+    <li id="hit-accent">Lucía Caminos voice actor</li>
+    <li id="hit-link-target"><a href="https://example.com/r/GTA6/comments/abc/new_post">a neutral title</a></li>
+    <li id="miss-one-weak-word">Jason went to the shop</li>
+    <li id="miss-leonidas">Leonidas of Sparta</li>
+    <li id="miss-inside-word">Install gtag and megtastic widgets</li>
+    <li id="miss-rockstar">She is a rockstar developer</li>
+  </ul>
+  <!-- The words are only in the image description: the whole card must go. -->
+  <div id="hit-image-card"><div><img src="y.png" alt="Lucia Caminos in GTA VI"></div><span>Neutral caption</span></div>
+  <div id="miss-image-card"><div><img src="z.png" alt="A cat"></div><span>Neutral caption</span></div>
+  <textarea id="miss-typing">GTA 6 typed by the user must never be blurred</textarea>
+  <ul id="feed"></ul>
+</main>
+<script>
+  // Content that arrives after load, like an infinite feed.
+  setTimeout(() => {
+    document.getElementById('feed').innerHTML =
+      '<li id="hit-late">Rockstar Games confirms the twist</li><li id="miss-late">Weather tomorrow</li>';
+  }, 200);
+</script>
+</body>
+</html>

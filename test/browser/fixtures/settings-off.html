@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Shield switched off</title>
+<meta name="test-query" content="q=gta+6">
+<meta name="expect-cover" content="no">
+<script>
+  // Stand in for a userscript manager whose saved settings say "off".
+  const saved = { settings: JSON.stringify({ enabled: false }) };
+  window.GM_getValue = (key, fallback) => saved[key] ?? fallback;
+  window.GM_setValue = (key, value) => { saved[key] = value; };
+</script>
+<script src="/shield.js"></script>
+</head>
+<body>
+  <!-- Nothing may stay hidden once the saved settings have loaded. -->
+  <ul>
+    <li id="miss-while-off">GTA 6 ending explained</li>
+    <li id="miss-while-off-2">Welcome to Vice City</li>
+  </ul>
+</body>
+</html>

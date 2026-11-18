@@ -1,0 +1,53 @@
+name: Something slipped through
+description: A GTA 6 post, video or page was shown when it should have been hidden.
+labels: [slipped-through]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Please do not write what the spoiler said, and do not attach a screenshot of it.** Other people reading this are avoiding spoilers too. Where it appeared is all that is needed.
+  - type: input
+    id: site
+    attributes:
+      label: Which site?
+      placeholder: youtube.com, old.reddit.com, a news site...
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of thing was it?
+      options:
+        - A post or video tile in a feed
+        - A comment
+        - A search result
+        - A sidebar, "trending" or "recommended" item
+        - A notification
+        - A whole page that was not covered
+        - Something else
+    validations:
+      required: true
+  - type: dropdown
+    id: text
+    attributes:
+      label: Did the visible text name the game?
+      description: The shield reads text. It cannot see inside pictures or videos.
+      options:
+        - Yes, the title or caption mentioned GTA or something from it
+        - No, only the picture or video gave it away
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: element
+    attributes:
+      label: The element that wraps the item (optional)
+      description: Right-click the item, Inspect, and copy the tag name or class of the element around the whole item. This usually is the entire fix.
+      placeholder: ytd-rich-item-renderer
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and how you installed it
+      placeholder: Firefox 160 with Violentmonkey / Chrome 142 unpacked extension
+    validations:
+      required: true

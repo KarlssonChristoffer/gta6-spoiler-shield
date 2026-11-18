@@ -1,0 +1,25 @@
+# Pi-hole regex deny list for GTA sites.
+#
+# Add each line in the Pi-hole web interface: Domains -> RegEx filter -> Add to denied domains.
+# Or from a shell on the Pi-hole:  pihole --regex '<pattern>' --comment "GTA 6 Spoiler Shield"
+#
+# Pi-hole sees domain names only. This blocks dedicated GTA sites for every
+# device on the network. It cannot hide GTA posts on reddit.com, youtube.com or
+# instagram.com: that is what the browser extension is for.
+
+# gtaforums.com, gtabase.com, gtaboom.com, gta6.com, gta.fandom.com, gta-news.*, ...
+(^|[.-])gta(-|\.|[0-9]|vi|forums|base|boom|online|wiki|inside|planet|gaming|news|mods?|world|net\.|all\.)
+
+# grandtheftauto.net, grandtheftauto.fandom.com, ...
+grandtheftauto
+
+# vicecity.*, vice-city.*
+(^|[.-])vice-?city
+
+# Fan news sites about Rockstar
+(^|\.)rockstarintel\.com$
+(^|\.)rockstarmag\.(fr|com)$
+
+# OPTIONAL, read before adding: this also breaks the Rockstar Games Launcher and
+# Social Club, so GTA Online and Red Dead Redemption 2 stop working until you remove it.
+# (^|\.)rockstargames\.com$

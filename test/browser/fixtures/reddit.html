@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Forum</title>
+<script>window.__spoilerShieldTestHost = 'www.reddit.com';</script>
+<script src="/shield.js"></script>
+</head>
+<body>
+  <!-- The title only lives in an attribute, as on the real site. -->
+  <shreddit-post id="hit-title-attribute" post-title="GTA 6 day one thread" subreddit-prefixed-name="r/gaming"><img src="a.jpg"></shreddit-post>
+  <!-- A neutral title, but posted in a GTA subreddit. -->
+  <shreddit-post id="hit-subreddit" post-title="Look at this sunset" subreddit-prefixed-name="r/GTA6"></shreddit-post>
+  <shreddit-post id="miss-post" post-title="My sourdough finally rose" subreddit-prefixed-name="r/Sourdough"></shreddit-post>
+
+  <!-- A reply about the game hides the reply, not the comment it answers. -->
+  <shreddit-comment id="miss-parent-comment">
+    <p>I am replaying an old favourite this week.</p>
+    <shreddit-comment id="hit-reply"><p>Same, until Vice City arrives on PC.</p></shreddit-comment>
+    <shreddit-comment id="miss-other-reply"><p>Which one?</p></shreddit-comment>
+  </shreddit-comment>
+
+  <!-- old.reddit.com -->
+  <div class="thing" id="hit-old-reddit"><a class="title" href="/r/pcgaming/comments/x/grand_theft_auto_vi_pc_port">PC port news</a></div>
+  <div class="thing" id="miss-old-reddit"><a class="title" href="/r/pcgaming/comments/y/new_gpu">New GPU</a></div>
+</body>
+</html>
