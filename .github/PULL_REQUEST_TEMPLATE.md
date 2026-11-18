@@ -10,3 +10,9 @@
 - [ ] Added or updated a fixture (`hit-` / `miss-` id) or a matcher test
 - [ ] Ran `npm run build` if I touched `extension/src/` or `userscript/`
 - [ ] Tried it on the real site
+
+**Was AI used to write this?**
+
+<!-- Yes / partly / no. All are fine; this project is AI-generated itself and labels it. -->
+
+<!-- This template was AI-generated. -->

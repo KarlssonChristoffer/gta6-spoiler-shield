@@ -2,6 +2,8 @@
 
 GTA 6 is out on console. The PC version is not, and I am waiting for it. This is an adblocker where the ad is GTA 6: posts, videos, comments and whole pages that mention the game are hidden before they are drawn on screen.
 
+> **This project is AI-generated.** All of the code, the tests, this documentation, the icon and the demo image were written by Claude Fable 5.2 (an AI model from Anthropic) in Claude Code. A human gave the directions and tried the result in their own browser. Nobody has audited it. It is short enough to read before you install it, and you should.
+
 ![A feed where two posts are replaced by a dashed bar reading "GTA 6 hidden, click to show", and two sidebar lines are blurred](docs/demo.png)
 
 It runs as a browser extension in Chrome and Edge, and as a userscript in Firefox on desktop and Android.
@@ -77,9 +79,9 @@ Sites rename their page elements a few times a year, so the usual bug is "this s
 
 One rule: **no spoilers in issues, pull requests, tests or code.** Describe where something slipped through, not what it said.
 
-## Credits
+## Who made this
 
-Written by Claude Fable 5.2 in Claude Code over an evening, directed by a person who would like to reach the ending on their own.
+An AI did. Claude Fable 5.2 wrote every file in this repository over one evening, including the commit messages, issue templates and this README. The human part was the idea, the directions, and checking that it works in Firefox. The demo image is a screenshot of a made-up page, also written by the AI; it does not show a real website.
 
 Not affiliated with or endorsed by Rockstar Games or Take-Two Interactive. Grand Theft Auto is their trademark.
 
